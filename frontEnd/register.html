@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'reg.css' %}">
+     <style>
+        
+     </style>
+</head>
+<body>
+    <div class="container">
+          <h1>registration</h1>
+          {% for msg in messages %}
+            <h5 style="color: red;">{{msg}}</h5>
+            {% endfor %}
+     <form action="register" method="POST">
+          {% csrf_token %}
+         <p>name</p>
+         <input type="text" name="name" id="">
+          <p>email</p>
+          <input type="email" name="email">
+         <p>password</p>
+          <input type="password" name="password">
+          <p>confirm your password</p>
+         <input type="password" name="passw" id=""><br>
+          <input type="submit" name="submit" id="">
+     </form>
+    </div>
+  
+</body>
+</html>

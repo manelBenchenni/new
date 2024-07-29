@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="{ % static 'home.css' % }">
+    <style>
+        *{
+             font-family: Arial, Helvetica, sans-serif;
+             margin: 0;
+             padding: 0;
+
+}
+         .container{
+            padding-right: 50px;
+            padding-left: 50px;
+          }
+          header{
+              background-color: #2a9259;
+               width: 100%;
+              height: 100px;
+              display: flex;
+              
+              align-items: center;
+              
+   
+            }
+            header .container{
+                display: flex;
+                justify-content: space-between;
+                
+            }
+            header .container .login{
+               position: absolute;
+               right: calc(50px + 0%);
+                
+            }
+            .logo{
+                font-weight: bold;
+                font-size: 18px;
+                color: white;
+            }
+            header a{
+                text-decoration: none;
+                font-size: 20px;
+                color: white;
+                text-transform: capitalize;
+            }
+            .content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                top: calc(50% - 100px);
+                text-align: center;
+                width: 400px;
+                left: calc(50% - 250px);
+                
+            }
+            .content h3{
+                color: rgb(42, 146, 89) ;
+                font-size: 35px;
+                margin-bottom: 10px;
+            }
+            .content p{
+                color: #777;
+                font-size: 18px;
+                margin-bottom: 18px;
+            }
+            .content .inputs{
+                display: flex;
+                flex-direction: row;
+                
+            }
+            .inputs input:first-child{
+                margin-right:15px ;
+            }
+            .inputs input[value='login']{
+                margin-left: 15px;
+                
+                background-color: white;
+                border: rgb(42, 146, 89) solid 3px;
+                color: rgb(42, 146, 89);
+                color: rgb(42, 146, 89);
+            } 
+       
+
+            .inputs input{
+                padding: 10px 20px;
+                background-color: rgb(42, 146, 89);
+                width: 90px;
+                border: rgb(42, 146, 89) solid 3px;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                cursor: pointer;
+                font-weight: 600;
+            }
+
+
+    </style>
+   
+</head>
+<body>
+    <header>
+        <div class="container">
+        <div class="logo">#coDing_hoOme</div>
+        <a href="#login" class="login">login</a></div>
+    </header>
+    <div class="container content">
+        <h3>Coding with java ! </h3>
+        <p>
+            this course is to learn the oop in java , if you do not have an acount register NOW ! 
+        </p>
+        <div class="inputs">
+            <form action="register">
+                 <input type="submit" value="register">
+            </form>
+         <form action="login">
+            <input type="submit" value="login">
+         </form>    
+       
+      
+    </div>
+
+</body>
+</html>

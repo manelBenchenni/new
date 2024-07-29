@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'quizz.css' %}">
+    
+</head>
+<body>
+  <div class="container">
+    <h1>quizz</h1>
+    <div class="qst">
+      
+      <div class="questions inactive">
+     whats your name ?
+    </div>
+    <div class="questions inactive">
+     what do you do in your life ?
+    </div>
+    <div class="questions inactive">how old are you ?</div>
+    </div>
+    <span>
+ 
+    </span>
+    <div class="chois">
+      <div class="choises inactive">
+         <div class="ch">manel</div>
+         <div class="ch">rania</div>
+         <div class="ch">diaa</div>
+         <div class="ch">ahmed</div>
+    </div>
+    <div class="choises inactive">
+     <div class="ch">driving</div>
+     <div class="ch">engineer</div>
+     <div class="ch">coocking</div>
+     <div class="ch">football</div>
+    </div>
+    <div class="choises inactive">
+     <div class="ch">20</div>
+     <div class="ch">34</div>
+     <div class="ch">15</div>
+     <div class="ch">40</div>
+    </div>
+   
+    </div>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="submit" id="input" value="start" name="next">
+      <input type="submit" style="background-color: white; border: 3px solid #217446;" class="inactive">
+    </form>
+    
+  </div>
+
+ <script src="{% static 'quizz.js' %}"></script>
+  
+</body>
+</html>

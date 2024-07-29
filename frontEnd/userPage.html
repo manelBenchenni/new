@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'user.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+        <div class="logo">#coDing_hoOme</div>
+        <a href="#login" class="login">{{name}}</a></div>
+    </header>
+    <h3>
+        start quizz 
+        <form action="quizz" method="post">
+            {% csrf_token %}
+            <input type="submit" name="quizz" value="quizz" id="">
+        </form>
+    </h3>
+</body>
+</html>
